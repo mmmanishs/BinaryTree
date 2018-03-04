@@ -13,8 +13,9 @@
 		0625947220466788001CB7D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0625947120466788001CB7D0 /* Assets.xcassets */; };
 		0625947520466788001CB7D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0625947320466788001CB7D0 /* LaunchScreen.storyboard */; };
 		0625947D20466844001CB7D0 /* RenderTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0625947C20466844001CB7D0 /* RenderTree.swift */; };
-		0625947F20466B06001CB7D0 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0625947E20466B06001CB7D0 /* BinaryTree.swift */; };
-		06ACAD53204A8807003C3840 /* BinaryTree+AttachNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ACAD52204A8807003C3840 /* BinaryTree+AttachNode.swift */; };
+		0625947F20466B06001CB7D0 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0625947E20466B06001CB7D0 /* Node.swift */; };
+		06ACAD53204A8807003C3840 /* Node+AttachNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ACAD52204A8807003C3840 /* Node+AttachNode.swift */; };
+		06ACAD55204BC6AB003C3840 /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ACAD54204BC6AB003C3840 /* NodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +27,9 @@
 		0625947420466788001CB7D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0625947620466788001CB7D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0625947C20466844001CB7D0 /* RenderTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderTree.swift; sourceTree = "<group>"; };
-		0625947E20466B06001CB7D0 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
-		06ACAD52204A8807003C3840 /* BinaryTree+AttachNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BinaryTree+AttachNode.swift"; sourceTree = "<group>"; };
+		0625947E20466B06001CB7D0 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		06ACAD52204A8807003C3840 /* Node+AttachNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Node+AttachNode.swift"; sourceTree = "<group>"; };
+		06ACAD54204BC6AB003C3840 /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +64,9 @@
 			children = (
 				0625946A20466788001CB7D0 /* AppDelegate.swift */,
 				0625946C20466788001CB7D0 /* ViewController.swift */,
-				0625947E20466B06001CB7D0 /* BinaryTree.swift */,
-				06ACAD52204A8807003C3840 /* BinaryTree+AttachNode.swift */,
+				06ACAD54204BC6AB003C3840 /* NodeView.swift */,
+				0625947E20466B06001CB7D0 /* Node.swift */,
+				06ACAD52204A8807003C3840 /* Node+AttachNode.swift */,
 				0625947C20466844001CB7D0 /* RenderTree.swift */,
 				0625946E20466788001CB7D0 /* Main.storyboard */,
 				0625947120466788001CB7D0 /* Assets.xcassets */,
@@ -147,8 +150,9 @@
 			files = (
 				0625947D20466844001CB7D0 /* RenderTree.swift in Sources */,
 				0625946D20466788001CB7D0 /* ViewController.swift in Sources */,
-				06ACAD53204A8807003C3840 /* BinaryTree+AttachNode.swift in Sources */,
-				0625947F20466B06001CB7D0 /* BinaryTree.swift in Sources */,
+				06ACAD55204BC6AB003C3840 /* NodeView.swift in Sources */,
+				06ACAD53204A8807003C3840 /* Node+AttachNode.swift in Sources */,
+				0625947F20466B06001CB7D0 /* Node.swift in Sources */,
 				0625946B20466788001CB7D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

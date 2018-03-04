@@ -10,19 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var scrollview: UIScrollView!
-    let renderTree = RenderTree()
-    var rootNode = BinaryTree.node(.empty, 50, .empty)
+    var rootNode = Node(value: 10, completion: nil)
+    let startRect = CGRect(x: 100, y: 50, width: 50, height: 50)
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.global().async {
-            self.buildBinaryTree(withRootNode: &self.rootNode, numberOfNodes: 1000)
+        self.scrollview.contentSize = CGSize(width: 500, height: 1000)
+        self.scrollview.contentOffset = CGPoint(x: 250, y: 50)
+        rootNode.center = self.scrollview.contentOffset
+        DispatchQueue.main.async {
+            self.buildBinaryTree(withRootNode: self.rootNode, numberOfNodes: 10)
+            let renderTree = RenderTree(scrollView: self.scrollview)
+            renderTree.drawTree(node: self.rootNode)
         }
+        
     }
     
-    func buildBinaryTree(withRootNode rootNode:inout BinaryTree<Int>, numberOfNodes: Int) {
+    func buildBinaryTree(withRootNode rootNode:Node<Int>, numberOfNodes: Int) {
         for _ in 1...numberOfNodes {
-            let newNode = getNode()
-            BinaryTree<Int>.attachNode(rootNode: &rootNode, newNode: newNode)
+            var newNode = getNode()
+            Node.attachNode(rootNode: rootNode, newNode: &newNode)
         }
     }
 
@@ -34,9 +40,9 @@ class ViewController: UIViewController {
 }
 
 extension ViewController {
-    func getNode() -> BinaryTree<Int> {
-        let num = Int(arc4random_uniform(100))
-        let node = BinaryTree.node(.empty, num, .empty)
+    func getNode() -> Node<Int> {
+        let num = Int(arc4random_uniform(20))
+        let node = Node(value: num, completion: nil)
         return node
     }
 }
