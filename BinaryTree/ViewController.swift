@@ -14,11 +14,12 @@ class ViewController: UIViewController {
     let startRect = CGRect(x: 100, y: 50, width: 50, height: 50)
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.scrollview.contentSize = CGSize(width: 500, height: 1000)
-        self.scrollview.contentOffset = CGPoint(x: 250, y: 50)
+
+        self.scrollview.contentSize = CGSize(width: 1500, height: 1500)
+        self.scrollview.contentOffset = CGPoint(x: 1000, y: 750)
         rootNode.center = self.scrollview.contentOffset
         DispatchQueue.main.async {
-            self.buildBinaryTree(withRootNode: self.rootNode, numberOfNodes: 10)
+            self.buildBinaryTree(withRootNode: self.rootNode, numberOfNodes: 100)
             let renderTree = RenderTree(scrollView: self.scrollview)
             renderTree.drawTree(node: self.rootNode)
         }
@@ -41,7 +42,7 @@ class ViewController: UIViewController {
 
 extension ViewController {
     func getNode() -> Node<Int> {
-        let num = Int(arc4random_uniform(20))
+        let num = Int(arc4random_uniform(100))
         let node = Node(value: num, completion: nil)
         return node
     }

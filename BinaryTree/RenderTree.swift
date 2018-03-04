@@ -10,16 +10,14 @@ import Foundation
 import UIKit
 
 class RenderTree{
-    
-    let dFactor = 40
-    let hFactor = 30
     let width:CGFloat = 40.0
     let height:CGFloat = 40.0
     let scrollView: UIScrollView
+    var drawCounter = 0.0
     
     init(scrollView: UIScrollView) {
         self.scrollView = scrollView
-     }
+    }
     
     func drawTree(node: Node<Int>?) {
         guard let node = node else {
@@ -44,11 +42,17 @@ class RenderTree{
             throw TreeError.centerCannotBeNil
         }
 
-        let label = UILabel()
-        label.frame.size = CGSize(width: width, height: height)
-        label.center = center
-        label.textAlignment = .center
-        label.text = node.description()
-        scrollView.addSubview(label)
+        DispatchQueue.main.asyncAfter(deadline: .now() + self.drawCounter) {
+            if let parentCenter = node.parentCenter {
+                self.scrollView.drawLine(fromPoint: parentCenter, toPoint: center, lineColor: UIColor.red)
+            }
+            let label = UILabel()
+            label.frame.size = CGSize(width: self.width, height: self.height)
+            label.center = center
+            label.textAlignment = .center
+            label.text = node.description()
+            self.scrollView.addSubview(label)
+        }
+        self.drawCounter = self.drawCounter + 1.0
     }
 }
