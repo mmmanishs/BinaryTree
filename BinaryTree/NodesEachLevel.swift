@@ -22,37 +22,25 @@ class NodesEachLevel {
     }
     
     func find() -> Int {
-        traverseNode(node: rootNode, atLevel: 1)
-        return numberOfNodes
+        return getNumberOfNodes(rootNode: self.rootNode, atLevel: level)
     }
     
-    func traverseNode(node: Node<Int>?, atLevel: Int) {
-        guard let node = node else {
-            levelCounter = levelCounter - 1
-            return
+    func getNumberOfNodes(rootNode: Node<Int>, atLevel level: Int) -> Int {
+        var queue = [rootNode]
+        for _ in 1..<level {
+            let queueCount = queue.count
+            for _ in 0..<queueCount {
+                let node = queue.removeLast()
+                if let nodeLeft = node.leftNode {
+                    queue.insert(nodeLeft, at: 0)
+                }
+                if let nodeRight = node.rightNode {
+                    queue.insert(nodeRight, at: 0)
+                }
+            }
         }
-        if atLevel == (level - 1) {
-            numberOfNodes = numberOfNodes + getNumberOfChildren(forNode: node)
-            levelCounter = levelCounter - 1
-            return
-        }
-        levelCounter = levelCounter + 1
-        traverseNode(node: node.leftNode, atLevel: levelCounter)
-        
-        levelCounter = levelCounter + 1
-        traverseNode(node: node.rightNode, atLevel: levelCounter)
-        levelCounter = levelCounter - 1
+        return queue.count
     }
     
-    func getNumberOfChildren(forNode node: Node<Int>) -> Int {
-        var children = 0
-        if let _ = node.leftNode {
-            children = children + 1
-        }
-        if let _ = node.rightNode {
-            children = children + 1
-        }
-        return children
-    }
 }
 

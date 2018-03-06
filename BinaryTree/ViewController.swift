@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         }
         
         DispatchQueue.main.async {
-            print("Number of nodes = \(NodesEachLevel(rootNode: self.rootNode, findNodesAtLevel: 5).find())")
+            print("Number of nodes = \(NodesEachLevel(rootNode: self.rootNode, findNodesAtLevel: 6).find())")
         }
     }
     
