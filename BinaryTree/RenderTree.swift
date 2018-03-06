@@ -53,6 +53,6 @@ class RenderTree{
             label.text = node.description()
             self.scrollView.addSubview(label)
         }
-        self.drawCounter = self.drawCounter + 1.0
+        self.drawCounter = self.drawCounter + 0.3
     }
 }

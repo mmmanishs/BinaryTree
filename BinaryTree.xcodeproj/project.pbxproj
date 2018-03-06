@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06252FA7204E4F70008A0BCA /* NodesEachLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06252FA6204E4F70008A0BCA /* NodesEachLevel.swift */; };
 		0625946B20466788001CB7D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0625946A20466788001CB7D0 /* AppDelegate.swift */; };
 		0625946D20466788001CB7D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0625946C20466788001CB7D0 /* ViewController.swift */; };
 		0625947020466788001CB7D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0625946E20466788001CB7D0 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06252FA6204E4F70008A0BCA /* NodesEachLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodesEachLevel.swift; sourceTree = "<group>"; };
 		0625946720466788001CB7D0 /* BinaryTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinaryTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0625946A20466788001CB7D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0625946C20466788001CB7D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				0625946A20466788001CB7D0 /* AppDelegate.swift */,
 				0625946C20466788001CB7D0 /* ViewController.swift */,
+				06252FA6204E4F70008A0BCA /* NodesEachLevel.swift */,
 				06ACAD54204BC6AB003C3840 /* UIVIew+drawing.swift */,
 				0625947E20466B06001CB7D0 /* Node.swift */,
 				0625947C20466844001CB7D0 /* RenderTree.swift */,
@@ -148,6 +151,7 @@
 				0625947D20466844001CB7D0 /* RenderTree.swift in Sources */,
 				0625946D20466788001CB7D0 /* ViewController.swift in Sources */,
 				06ACAD55204BC6AB003C3840 /* UIVIew+drawing.swift in Sources */,
+				06252FA7204E4F70008A0BCA /* NodesEachLevel.swift in Sources */,
 				0625947F20466B06001CB7D0 /* Node.swift in Sources */,
 				0625946B20466788001CB7D0 /* AppDelegate.swift in Sources */,
 			);
